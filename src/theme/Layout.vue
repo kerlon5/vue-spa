@@ -26,4 +26,8 @@ $primary: #287ab1;
 .columns{
   flex-wrap: wrap
 }
+
+.hero.welcome.is-info {
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
 </style>
