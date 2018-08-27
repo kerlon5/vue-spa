@@ -2,7 +2,7 @@
   <nav class="navbar has-shadow">
     <div class="container">
       <router-link to="/" exact>
-        <img src="http://bit.ly/vue-img"
+        <img style="width:48px;" src="https://toppng.com/public/uploads/preview/weather-icon-11530957523kyheyffhqd.png"
           alt="Vue SPA" />
       </router-link>
       <router-link class="navbar-item is-tab"

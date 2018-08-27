@@ -10,9 +10,6 @@
 <div class="control has-icons-left">
   <div class="select is-large">
     <select @change="onChange($event.target.value)">
-      <!-- <option selected>Country</option>
-      <option>Select dropdown</option>
-      <option>With options</option> -->
        <option v-for="post in posts" v-bind:key="post.id" :value="post.id" :selected="post.id == $route.query.id">{{ post.title }} </option>
     </select>
   </div>
@@ -33,26 +30,29 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">{{weather.wind.speed}}</p>
-                                <p class="subtitle">Users</p>
+                                <!-- <p class="title"></p> -->
+                                <img v-if="weather.weather[0].main === 'Clouds'" style="width:50px;" src="https://image.flaticon.com/icons/svg/414/414927.svg"/>
+                                <img v-else-if="weather.weather[0].main === 'Rain'" style="width:50px;" src="https://image.flaticon.com/icons/svg/861/861056.svg"/>
+                                <img v-else style="width:50px;" src="https://image.flaticon.com/icons/svg/414/414927.svg"/>
+                                <p class="subtitle">{{weather.weather[0].main}}</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">59k</p>
-                                <p class="subtitle">Products</p>
+                                <p class="title">{{weather.main.temp_max}}</p>
+                                <p class="subtitle">Temp Max</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">3.4k</p>
-                                <p class="subtitle">Open Orders</p>
+                                <p class="title">{{weather.main.temp_min}}</p>
+                                <p class="subtitle">Temp Min</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">19</p>
-                                <p class="subtitle">Exceptions</p>
+                                <p class="title">{{weather.main.humidity}}</p>
+                                <p class="subtitle">Humidity</p>
                             </article>
                         </div>
                     </div>
@@ -61,14 +61,14 @@
                     <div class="tile is-ancestor has-text-centered">
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">439k</p>
-                                <p class="subtitle">Users</p>
+                                <p class="title">{{weather.main.pressure}}</p>
+                                <p class="subtitle">Pressure</p>
                             </article>
                         </div>
                         <div class="tile is-parent">
                             <article class="tile is-child box">
-                                <p class="title">59k</p>
-                                <p class="subtitle">Products</p>
+                                <p class="title">{{weather.wind.speed}}m/s</p>
+                                <!-- <p class="subtitle"><img style="transform: rotate({{weather.wind.degree}}deg);" src="https://image.flaticon.com/icons/svg/109/109617.svg"/></p> -->
                             </article>
                         </div>
                         <div class="tile is-parent">
@@ -118,13 +118,7 @@ export default {
     }
   },
   created () {
-    // appService.getCity(this.$route.query.id).then(data => {
-    //   console.log(JSON.stringify(data))
-    // })
     this.loadWeather()
-    // debugger // eslint-disable-line
-    // document.getElementsByTagName('select')[0].value = this.$route.query.id
-    // console.log('aaaa ' + this.$route.query.id)
   }
 }
 </script>
