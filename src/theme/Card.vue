@@ -9,7 +9,7 @@
                             </h1> -->
 <div class="control has-icons-left">
   <div class="select is-large">
-    <select>
+    <select @change="onChange($event.target.value)">
       <!-- <option selected>Country</option>
       <option>Select dropdown</option>
       <option>With options</option> -->
@@ -99,6 +99,10 @@ export default {
     }
   },
   methods: {
+    onChange (id) {
+      this.$route.query.id = id
+      this.loadWeather()
+    },
     loadWeather () {
       appService.getCity(this.$route.query.id).then(data => {
         console.log(JSON.stringify(data))
