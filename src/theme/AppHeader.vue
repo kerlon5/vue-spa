@@ -8,7 +8,7 @@
       <router-link class="navbar-item is-tab"
       to="/" exact>Home</router-link>
       <router-link class="navbar-item is-tab"
-      to="/card">Card</router-link>
+      to="/card?id=1">Card</router-link>
     </div>
   </nav>
 </template>

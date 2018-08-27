@@ -5,7 +5,7 @@
           <slot name="content"></slot>
         </div>
         <footer class="card-footer">
-          <a class="card-footer-item" :href="link" target="_blank">Read More</a>
+          <a class="card-footer-item" :href="link" >Vue Weather</a>
         </footer>
       </div>
 </template>
