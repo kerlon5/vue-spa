@@ -15,9 +15,10 @@
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "vue": "^2.4.2",
-    "vue-router": "^2.7.0"
+    "vue-router": "^2.7.0",
+    "vue-server-renderer": "^2.5.17"
   },
-  "engines":{
+  "engines": {
     "node": "^8.9.4",
     "npm": "^5.6.0"
   },
