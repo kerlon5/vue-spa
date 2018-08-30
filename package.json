@@ -17,7 +17,6 @@
     "font-awesome": "^4.7.0",
     "serialize-javascript": "^1.5.0",
     "vue": "^2.4.2",
-    "vue-router": "^2.7.0",
     "vue-server-renderer": "^2.4.2"
   },
   "engines": {
@@ -43,6 +42,7 @@
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "vue-loader": "^13.0.2",
+    "vue-router": "^2.7.0",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.12.0",
